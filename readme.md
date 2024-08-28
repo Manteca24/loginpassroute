@@ -33,3 +33,10 @@ Fácil, cogeréis cada trozo de código que se dividirá entre `app.js`, `middle
 - Comienza por lo sencillo. Como inicializar el servidor, requerir express, ...
 - Muxhos exports, nos da la idea de lo que puede haber dentro de cada archivo
 - No te olvides de hacer `npm install` para que las dependencias se instalen en nuestro proyecto
+
+
+## Anotaciones personales después de hacer el proyecto:
+- OJO con el orden de ejecución de middlewares y rutas en app.js. La configuración de middlewares van antes de las rutas.
+- Función `setup` en `routes.js` incluye todas las rutas dentro de la función `setup` para asegurarte de que están registradas
+correctamente.
+- A `dotenv.config()` solo hace falta llamarlo una vez, en `app.js` (¿para qué dos veces en el puzzle? ¿error?)
